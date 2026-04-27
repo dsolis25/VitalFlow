@@ -1,0 +1,346 @@
+/* ---PALETA DE COLORES UTILIZADA---
+
+_#EAF6FF / Body (celeste claro, transmite limpieza y calma).
+_#012655 / Header, pasos, footer (azul oscuro, profesional y confiable). 
+_#FAF3E0 / Secciones como hero, servicios (card) y contacto / antiquewhite (beige claro, tono calido y amigable).
+_#2EC4B6 / Beneficios y testimonios (turquesa, moderno asociado a salud y tecnología-HealthTech).
+_#FFFFFF / Texto sobre fondos oscuros (blanco, alto contraste y legibilidad).
+_#000000 / Texto general (negro, lectura clara)
+
+Se realizó un ajuste en el segundo avance, sustituyendo el color "cadetblue" por #2EC4B6 con el objetivo
+de mejorar la identidad visual del sitio, alineándolo con un enfoque más moderno, tecnológico y relacionado 
+con el área de salud.*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+section{
+    scroll-margin-top: 6rem;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background: #eaf6ff;
+    color: black;
+    overflow-x: hidden;
+    padding-top: 4.8rem;
+}
+
+/* ---TIPOGRAFÍA--- */
+
+h1, h2, h3{
+    font-family: 'Poppins', sans-serif;
+}
+
+p, a, li, button, input, textarea{
+    font-family: 'Roboto', sans-serif;
+}
+
+/* ---HEADER--- */
+
+header{
+    background: #012655;
+    box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,0.1);
+}
+
+/* ---NAVBAR AJUSTADO--- */
+
+.navbar{
+    padding: 0.5rem 1rem;
+}
+
+.navbar-nav{
+    text-align: center;
+}
+
+/* ---LOGO--- */
+
+.logo{
+    width: auto;
+    height: 4.5rem;
+    border-radius: 5rem;
+    object-fit: contain;
+}
+
+.navbar-brand{
+    display:flex;
+    align-items: center;
+}
+.navbar-nav .nav-link{
+    font-size: 0.95rem;
+    margin-left: 1rem;
+}
+
+.navbar-nav .nav-link:hover{
+    opacity: 0.8;
+}
+
+/*---HERO---*/
+
+.hero{
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem 10%;
+    gap: 3rem;
+
+    /*---PARALLAX---*/
+    background-image: url("../assets/img/Telemedicina.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+}
+
+.hero-text{
+    width: 50%;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-text h1{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-text p{
+    margin-bottom: 2rem;
+}
+
+    /*---BOTONES---*/
+
+.boton{
+    display: inline-block;
+    background: #012655;
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    position: relative;
+    z-index: 2;
+}    
+
+button{
+    padding: 1rem;
+    background: #012655;
+    color: white;
+    border: none;
+} 
+
+.boton,
+button{
+    transition: all 0.3s ease;
+    cursor:pointer;
+}
+
+.boton:hover,
+button:hover{
+    background: #2EC4B6;
+    color: black;
+    transform: translateY(-0.2rem) scale(1.05);
+    box-shadow: 0.05rem 1rem rgba(0,0,0,0.3);
+}
+
+.boton:active,
+button:active{
+    transform: scale(0.98);
+}
+
+/*---SERVICIOS---*/
+
+.servicios{
+    padding: 5rem 10%;
+    text-align: center;
+}
+
+.card{
+    background: antiquewhite;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    transition: transform 0.3s;
+}
+
+.card:hover{
+    transform: translateY(-0.5rem);
+}
+
+.card img{
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 10%;
+}
+
+/* ---PASOS--- */
+
+.pasos{
+    padding: 5rem 10%;
+    text-align: center;
+}
+
+.grid-pasos{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.paso{
+    background: #012655;
+    color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+
+/* ---BENEFICIOS--- */
+
+.beneficios{
+    padding: 5rem 10%;
+    text-align: center;
+    background: #f5f7fa;
+}
+
+.flex-beneficios{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.beneficio{
+    background: #2EC4B6;
+    color:white;
+    padding: 1em 2em;
+    border-radius: 0.5rem;
+}
+
+/* ---Testimonios--- */
+
+.testimonios{
+    padding: 5rem 10%;
+    text-align: center;
+}
+
+.grid-testimonios{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.testimonio{
+    background: #2EC4B6;
+    color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+
+/* ---CONTACTO--- */
+
+.contacto{
+    padding: 5rem 10%;
+    background: antiquewhite;
+    text-align: center;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 30rem;
+    margin: auto;
+}
+
+input,
+textarea{
+    padding: 0.8em;
+    border: 0.1rem solid #ccc;
+}
+
+
+
+/* ---FOOTER--- */
+
+footer{
+    text-align: center;
+    padding: 2rem;
+    background: #012655;
+    color: white;
+}
+
+.redes{
+    margin-bottom: 1rem;
+}
+
+.redes a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    background: white;
+    border-radius: 50%;
+    margin: 0 0.5rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.redes a:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 0.5rem rgba(0,0,0,0.3);
+}
+
+.redes img{
+    width: 1.5rem;
+}
+
+
+/*-----Botón Whatsapp flotante------*/
+
+.whatsapp{
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0.625rem rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+    z-index: 1000;
+    animation: pulse 2s infinite;
+}
+
+.whatsapp img{
+    width: 1.8rem;
+}
+
+.whatsapp:hover{
+    transform: scale(1.1);
+}
+
+@keyframes pulse{
+    0%{ transform: scale(1);}
+    50%{ transform: scale(1.1);}
+    100%{ transform: scale(1);}
+}
+
+
+
